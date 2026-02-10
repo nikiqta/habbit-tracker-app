@@ -5,7 +5,14 @@
     "paths": {
       "*": ["src/*"],
       "tests": ["tests/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@types/*": ["src/types/*"],
+      "@screens/*": ["src/screens/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@constants/*": ["src/constants/*"],
+      "@services/*": ["src/services/*"]
     }
   }
 }
