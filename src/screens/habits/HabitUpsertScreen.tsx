@@ -1,9 +1,10 @@
-import { Text, View } from 'react-native';
+import AppText from '@components/ui/AppText';
+import Screen from '@components/ui/Screen';
 
 export const HabitUpsertScreen: React.FC = () => {
   return (
-    <View>
-      <Text>Habit Upsert Screen</Text>
-    </View>
+    <Screen>
+      <AppText variant="h1">Habit Upsert Screen</AppText>
+    </Screen>
   );
 };

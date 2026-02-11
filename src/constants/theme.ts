@@ -1,6 +1,6 @@
 export const theme = {
   colors: {
-    bg: '#FFF',
+    bg: '#0B0F14',
     card: '#121824',
     text: '#E8EEF6',
     muted: '#9AA7B5',

@@ -1,10 +1,10 @@
-import Screen from 'components/ui/Screen';
-import { Text } from 'react-native';
+import AppText from '@components/ui/AppText';
+import Screen from '@components/ui/Screen';
 
 export const RegisterScreen: React.FC = () => {
   return (
     <Screen>
-      <Text>Register Screen</Text>
+      <AppText variant="h1">Register Screen</AppText>
     </Screen>
   );
 };

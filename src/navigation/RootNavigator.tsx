@@ -4,7 +4,7 @@ import AuthStack from './AuthStack';
 
 export default function RootNavigator() {
   // TEMP for now: replace later with SecureStore + real auth logic
-  const [isAuthed] = useState(true);
+  const [isAuthed] = useState(false);
 
   // Memo only to avoid re-mount churn when you later add providers
   const content = useMemo(() => {
