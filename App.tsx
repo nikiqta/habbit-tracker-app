@@ -9,9 +9,9 @@ import RootNavigator from './src/navigation/RootNavigator';
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1, paddingTop: 20 }}>
+      <StatusBar style="auto" />
       <NavigationContainer>
         <RootNavigator />
-        <StatusBar style="auto" />
       </NavigationContainer>
     </GestureHandlerRootView>
   );
