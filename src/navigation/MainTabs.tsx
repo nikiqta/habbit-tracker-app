@@ -1,15 +1,22 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
 import HabitsStack from './HabitsStack';
 import ProfileStack from './ProfileStack';
 import { MainTabsParamList } from 'types/navigation';
-import Ionicons from '@expo/vector-icons/build/Ionicons';
+import { theme } from 'constants/theme';
 
 const Tab = createBottomTabNavigator<MainTabsParamList>();
 
 export default function MainTabs() {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator   
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: { backgroundColor: theme.colors.card, borderTopColor: theme.colors.border },
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: theme.colors.muted,
+      }}>
       <Tab.Screen
         name="HabitsTab"
         component={HabitsStack}

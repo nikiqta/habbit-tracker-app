@@ -5,14 +5,17 @@ import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import RootNavigator from './src/navigation/RootNavigator';
+import AuthProvider from './src/providers/AuthProvider';
 
 export default function App() {
   return (
-    <GestureHandlerRootView style={{ flex: 1, paddingTop: 20 }}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar style="auto" />
-      <NavigationContainer>
-        <RootNavigator />
-      </NavigationContainer>
+      <AuthProvider>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </AuthProvider>
     </GestureHandlerRootView>
   );
 }

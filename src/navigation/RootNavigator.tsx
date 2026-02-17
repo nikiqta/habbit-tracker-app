@@ -1,15 +1,19 @@
-import { useMemo, useState } from 'react';
-import MainTabs from './MainTabs';
 import AuthStack from './AuthStack';
+import MainTabs from './MainTabs';
+import { useAuth } from '@hooks/useAuth';
+import Loader from '@components/ui/Loader';
+import Screen from '@components/ui/Screen';
 
 export default function RootNavigator() {
-  // TEMP for now: replace later with SecureStore + real auth logic
-  const [isAuthed] = useState(false);
+  const { isLoading, isAuthenticated } = useAuth();
 
-  // Memo only to avoid re-mount churn when you later add providers
-  const content = useMemo(() => {
-    return isAuthed ? <MainTabs /> : <AuthStack />;
-  }, [isAuthed]);
+  if (isLoading) {
+    return (
+      <Screen>
+        <Loader />
+      </Screen>
+    );
+  }
 
-  return content;
+  return isAuthenticated ? <MainTabs /> : <AuthStack />;
 }

@@ -12,7 +12,7 @@
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
       "@constants/*": ["src/constants/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
     }
   }
 }
